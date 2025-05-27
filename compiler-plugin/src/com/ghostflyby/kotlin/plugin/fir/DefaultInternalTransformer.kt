@@ -1,5 +1,6 @@
 package com.ghostflyby.kotlin.plugin.fir
 
+import org.jetbrains.kotlin.KtFakeSourceElementKind
 import org.jetbrains.kotlin.descriptors.Visibilities
 import org.jetbrains.kotlin.fir.FirSession
 import org.jetbrains.kotlin.fir.analysis.checkers.getContainingClassSymbol
@@ -59,6 +60,18 @@ class DefaultInternalTransformer(session: FirSession) : FirStatusTransformerExte
       )
     else
       status
+  }
+
+  override fun transformStatus(
+    status: FirDeclarationStatus,
+    property: FirProperty,
+    containingClass: FirClassLikeSymbol<*>?,
+    isLocal: Boolean
+  ): FirDeclarationStatus {
+    return if (property.source?.kind == KtFakeSourceElementKind.PropertyFromParameter && containingClass?.visibility == Visibilities.Public) {
+      status
+    } else
+      transformStatus(status, property)
   }
 
 }
