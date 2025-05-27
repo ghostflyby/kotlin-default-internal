@@ -6,6 +6,6 @@ plugins {
 }
 
 allprojects {
-    group = "com.ghostflyby.kotlin.plugin"
+    group = "io.github.ghostflyby"
     version = "0.1.0-SNAPSHOT"
 }
