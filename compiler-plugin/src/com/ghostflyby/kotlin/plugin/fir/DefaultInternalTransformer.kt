@@ -29,6 +29,10 @@ class DefaultInternalTransformer(session: FirSession) : FirStatusTransformerExte
       return false
     }
 
+    if (declaration is FirConstructor) {
+      return false
+    }
+
     return declaration.run {
       origin == FirDeclarationOrigin.Source &&
           !hasModifier(KtTokens.PUBLIC_KEYWORD)
@@ -55,18 +59,6 @@ class DefaultInternalTransformer(session: FirSession) : FirStatusTransformerExte
       )
     else
       status
-  }
-
-  override fun transformStatus(
-    status: FirDeclarationStatus,
-    constructor: FirConstructor,
-    containingClass: FirClassLikeSymbol<*>?,
-    isLocal: Boolean
-  ): FirDeclarationStatus {
-    return if (constructor.isPrimary && containingClass != null)
-      status.copyWithNewDefaults(containingClass.visibility)
-    else
-      transformStatus(status, constructor)
   }
 
 }
