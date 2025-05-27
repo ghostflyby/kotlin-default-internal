@@ -1,0 +1,6 @@
+FILE: interface.kt
+    internal abstract interface I : R|kotlin/Any| {
+    }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

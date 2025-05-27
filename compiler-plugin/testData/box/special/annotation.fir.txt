@@ -1,0 +1,13 @@
+FILE: annotation.kt
+    public final annotation class A : R|kotlin/Annotation| {
+        public constructor(name: R|kotlin/String|): R|A| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final val name: R|kotlin/String| = R|<local>/name|
+            public get(): R|kotlin/String|
+
+    }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

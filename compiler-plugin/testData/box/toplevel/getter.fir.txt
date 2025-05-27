@@ -1,0 +1,8 @@
+FILE: getter.kt
+    internal final val a: R|kotlin/Int|
+        internal get(): R|kotlin/Int| {
+            ^ Int(1)
+        }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

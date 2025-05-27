@@ -1,0 +1,10 @@
+FILE: setter.kt
+    internal final var a: R|kotlin/Int|
+        internal get(): R|kotlin/Int| {
+            ^ Int(2)
+        }
+        internal set(value: R|kotlin/Int|): R|kotlin/Unit| {
+        }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

@@ -1,0 +1,18 @@
+FILE: interface.kt
+    internal abstract interface I : R|kotlin/Any| {
+        public abstract fun a(): R|kotlin/Int|
+
+        public abstract val b: R|kotlin/Int|
+            public get(): R|kotlin/Int|
+
+        public final class C : R|kotlin/Any| {
+            public constructor(): R|I.C| {
+                super<R|kotlin/Any|>()
+            }
+
+        }
+
+    }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

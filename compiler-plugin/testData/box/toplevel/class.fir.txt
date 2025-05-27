@@ -1,0 +1,10 @@
+FILE: class.kt
+    internal final class C : R|kotlin/Any| {
+        public constructor(): R|C| {
+            super<R|kotlin/Any|>()
+        }
+
+    }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

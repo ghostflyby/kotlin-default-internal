@@ -1,0 +1,21 @@
+FILE: companion.kt
+    private final class C : R|kotlin/Any| {
+        public constructor(): R|C| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final companion object Companion : R|kotlin/Any| {
+            private constructor(): R|C.Companion| {
+                super<R|kotlin/Any|>()
+            }
+
+            public final operator fun invoke(): R|C| {
+                ^invoke R|/C.C|()
+            }
+
+        }
+
+    }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

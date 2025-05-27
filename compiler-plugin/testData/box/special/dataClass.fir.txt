@@ -1,0 +1,17 @@
+FILE: dataClass.kt
+    private final data class D : R|kotlin/Any| {
+        public constructor(i: R|kotlin/Int|): R|D| {
+            super<R|kotlin/Any|>()
+        }
+
+        internal final val i: R|kotlin/Int| = R|<local>/i|
+            internal get(): R|kotlin/Int|
+
+        internal final operator fun component1(): R|kotlin/Int|
+
+        public final fun copy(i: R|kotlin/Int| = this@R|/D|.R|/D.i|): R|D|
+
+    }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

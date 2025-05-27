@@ -1,0 +1,13 @@
+FILE: primaryConstructor.kt
+    public final class C : R|kotlin/Any| {
+        public constructor(a: R|kotlin/Int|): R|C| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final val a: R|kotlin/Int| = R|<local>/a|
+            public get(): R|kotlin/Int|
+
+    }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

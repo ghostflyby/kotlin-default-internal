@@ -1,0 +1,16 @@
+FILE: var.kt
+    public final var a: R|kotlin/Int|
+        public get(): R|kotlin/Int| {
+            ^ Int(2)
+        }
+        public set(value: R|kotlin/Int|): R|kotlin/Unit| {
+        }
+    public final var b: R|kotlin/Int|
+        public get(): R|kotlin/Int| {
+            ^ Int(2)
+        }
+        internal set(value: R|kotlin/Int|): R|kotlin/Unit| {
+        }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

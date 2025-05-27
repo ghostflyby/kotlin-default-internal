@@ -1,0 +1,21 @@
+FILE: class.kt
+    internal final class C : R|kotlin/Any| {
+        public constructor(): R|C| {
+            super<R|kotlin/Any|>()
+        }
+
+        internal final fun a(): R|kotlin/String| {
+            ^a String()
+        }
+
+        internal final val b: R|kotlin/Int| = Int(1)
+            internal get(): R|kotlin/Int|
+
+        internal final var c: R|kotlin/Int| = Int(2)
+            internal get(): R|kotlin/Int|
+            internal set(value: R|kotlin/Int|): R|kotlin/Unit|
+
+    }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }

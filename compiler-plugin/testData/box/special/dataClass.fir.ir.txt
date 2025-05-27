@@ -1,0 +1,94 @@
+FILE fqName:<root> fileName:/dataClass.kt
+  CLASS CLASS name:D modality:FINAL visibility:private [data] superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:<root>.D
+    PROPERTY name:i visibility:internal modality:FINAL [val]
+      FIELD PROPERTY_BACKING_FIELD name:i type:kotlin.Int visibility:private [final]
+        EXPRESSION_BODY
+          GET_VAR 'i: kotlin.Int declared in <root>.D.<init>' type=kotlin.Int origin=INITIALIZE_PROPERTY_FROM_PARAMETER
+      FUN DEFAULT_PROPERTY_ACCESSOR name:<get-i> visibility:internal modality:FINAL <> ($this:<root>.D) returnType:kotlin.Int
+        correspondingProperty: PROPERTY name:i visibility:internal modality:FINAL [val]
+        $this: VALUE_PARAMETER name:<this> type:<root>.D
+        BLOCK_BODY
+          RETURN type=kotlin.Nothing from='internal final fun <get-i> (): kotlin.Int declared in <root>.D'
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:i type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: <root>.D declared in <root>.D.<get-i>' type=<root>.D origin=null
+    CONSTRUCTOR visibility:public <> (i:kotlin.Int) returnType:<root>.D [primary]
+      VALUE_PARAMETER name:i index:0 type:kotlin.Int
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:D modality:FINAL visibility:private [data] superTypes:[kotlin.Any]' type=kotlin.Unit
+    FUN GENERATED_DATA_CLASS_MEMBER name:component1 visibility:internal modality:FINAL <> ($this:<root>.D) returnType:kotlin.Int [operator]
+      $this: VALUE_PARAMETER name:<this> type:<root>.D
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='internal final fun component1 (): kotlin.Int declared in <root>.D'
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:i type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: <root>.D declared in <root>.D.component1' type=<root>.D origin=null
+    FUN GENERATED_DATA_CLASS_MEMBER name:copy visibility:public modality:FINAL <> ($this:<root>.D, i:kotlin.Int) returnType:<root>.D
+      $this: VALUE_PARAMETER name:<this> type:<root>.D
+      VALUE_PARAMETER name:i index:0 type:kotlin.Int
+        EXPRESSION_BODY
+          GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:i type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+            receiver: GET_VAR '<this>: <root>.D declared in <root>.D.copy' type=<root>.D origin=null
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun copy (i: kotlin.Int): <root>.D declared in <root>.D'
+          CONSTRUCTOR_CALL 'public constructor <init> (i: kotlin.Int) declared in <root>.D' type=<root>.D origin=null
+            i: GET_VAR 'i: kotlin.Int declared in <root>.D.copy' type=kotlin.Int origin=null
+    FUN GENERATED_DATA_CLASS_MEMBER name:equals visibility:public modality:OPEN <> ($this:<root>.D, other:kotlin.Any?) returnType:kotlin.Boolean [operator]
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:<root>.D
+      VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+      BLOCK_BODY
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun EQEQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EQEQEQ
+              arg0: GET_VAR '<this>: <root>.D declared in <root>.D.equals' type=<root>.D origin=null
+              arg1: GET_VAR 'other: kotlin.Any? declared in <root>.D.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in <root>.D'
+              CONST Boolean type=kotlin.Boolean value=true
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: TYPE_OP type=kotlin.Boolean origin=NOT_INSTANCEOF typeOperand=<root>.D
+              GET_VAR 'other: kotlin.Any? declared in <root>.D.equals' type=kotlin.Any? origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in <root>.D'
+              CONST Boolean type=kotlin.Boolean value=false
+        VAR IR_TEMPORARY_VARIABLE name:tmp_0 type:<root>.D [val]
+          TYPE_OP type=<root>.D origin=CAST typeOperand=<root>.D
+            GET_VAR 'other: kotlin.Any? declared in <root>.D.equals' type=kotlin.Any? origin=null
+        WHEN type=kotlin.Unit origin=null
+          BRANCH
+            if: CALL 'public final fun not (): kotlin.Boolean declared in kotlin.Boolean' type=kotlin.Boolean origin=EXCLEQ
+              $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=EXCLEQ
+                arg0: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:i type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR '<this>: <root>.D declared in <root>.D.equals' type=<root>.D origin=null
+                arg1: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:i type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+                  receiver: GET_VAR 'val tmp_0: <root>.D declared in <root>.D.equals' type=<root>.D origin=null
+            then: RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in <root>.D'
+              CONST Boolean type=kotlin.Boolean value=false
+        RETURN type=kotlin.Nothing from='public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in <root>.D'
+          CONST Boolean type=kotlin.Boolean value=true
+    FUN GENERATED_DATA_CLASS_MEMBER name:hashCode visibility:public modality:OPEN <> ($this:<root>.D) returnType:kotlin.Int
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:<root>.D
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun hashCode (): kotlin.Int declared in <root>.D'
+          CALL 'public open fun hashCode (): kotlin.Int declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:i type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: <root>.D declared in <root>.D.hashCode' type=<root>.D origin=null
+    FUN GENERATED_DATA_CLASS_MEMBER name:toString visibility:public modality:OPEN <> ($this:<root>.D) returnType:kotlin.String
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:<root>.D
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun toString (): kotlin.String declared in <root>.D'
+          STRING_CONCATENATION type=kotlin.String
+            CONST String type=kotlin.String value="D("
+            CONST String type=kotlin.String value="i="
+            GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:i type:kotlin.Int visibility:private [final]' type=kotlin.Int origin=null
+              receiver: GET_VAR '<this>: <root>.D declared in <root>.D.toString' type=<root>.D origin=null
+            CONST String type=kotlin.String value=")"
+  FUN name:box visibility:internal modality:FINAL <> () returnType:kotlin.String
+    BLOCK_BODY
+      RETURN type=kotlin.Nothing from='internal final fun box (): kotlin.String declared in <root>'
+        CONST String type=kotlin.String value="OK"

@@ -1,0 +1,25 @@
+FILE fqName:<root> fileName:/var.kt
+  FUN name:box visibility:internal modality:FINAL <> () returnType:kotlin.String
+    BLOCK_BODY
+      RETURN type=kotlin.Nothing from='internal final fun box (): kotlin.String declared in <root>'
+        CONST String type=kotlin.String value="OK"
+  PROPERTY name:a visibility:public modality:FINAL [var]
+    FUN name:<get-a> visibility:public modality:FINAL <> () returnType:kotlin.Int
+      correspondingProperty: PROPERTY name:a visibility:public modality:FINAL [var]
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun <get-a> (): kotlin.Int declared in <root>'
+          CONST Int type=kotlin.Int value=2
+    FUN name:<set-a> visibility:public modality:FINAL <> (value:kotlin.Int) returnType:kotlin.Unit
+      correspondingProperty: PROPERTY name:a visibility:public modality:FINAL [var]
+      VALUE_PARAMETER name:value index:0 type:kotlin.Int
+      BLOCK_BODY
+  PROPERTY name:b visibility:public modality:FINAL [var]
+    FUN name:<get-b> visibility:public modality:FINAL <> () returnType:kotlin.Int
+      correspondingProperty: PROPERTY name:b visibility:public modality:FINAL [var]
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public final fun <get-b> (): kotlin.Int declared in <root>'
+          CONST Int type=kotlin.Int value=2
+    FUN name:<set-b> visibility:internal modality:FINAL <> (value:kotlin.Int) returnType:kotlin.Unit
+      correspondingProperty: PROPERTY name:b visibility:public modality:FINAL [var]
+      VALUE_PARAMETER name:value index:0 type:kotlin.Int
+      BLOCK_BODY

@@ -6,6 +6,7 @@ import com.intellij.testFramework.TestDataPath;
 import org.jetbrains.kotlin.test.util.KtTestUtil;
 import org.jetbrains.kotlin.test.TargetBackend;
 import org.jetbrains.kotlin.test.TestMetadata;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -21,15 +22,111 @@ public class JvmBoxTestGenerated extends AbstractJvmBoxTest {
     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler-plugin/testData/box"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
   }
 
-  @Test
-  @TestMetadata("keepManual.kt")
-  public void testKeepManual() {
-    runTest("compiler-plugin/testData/box/keepManual.kt");
+  @Nested
+  @TestMetadata("compiler-plugin/testData/box/nestedDeclarations")
+  @TestDataPath("$PROJECT_ROOT")
+  public class NestedDeclarations {
+    @Test
+    public void testAllFilesPresentInNestedDeclarations() {
+      KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler-plugin/testData/box/nestedDeclarations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
+    }
+
+    @Test
+    @TestMetadata("class.kt")
+    public void testClass() {
+      runTest("compiler-plugin/testData/box/nestedDeclarations/class.kt");
+    }
+
+    @Test
+    @TestMetadata("interface.kt")
+    public void testInterface() {
+      runTest("compiler-plugin/testData/box/nestedDeclarations/interface.kt");
+    }
   }
 
-  @Test
-  @TestMetadata("topLevelDefaults.kt")
-  public void testTopLevelDefaults() {
-    runTest("compiler-plugin/testData/box/topLevelDefaults.kt");
+  @Nested
+  @TestMetadata("compiler-plugin/testData/box/special")
+  @TestDataPath("$PROJECT_ROOT")
+  public class Special {
+    @Test
+    public void testAllFilesPresentInSpecial() {
+      KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler-plugin/testData/box/special"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
+    }
+
+    @Test
+    @TestMetadata("annotation.kt")
+    public void testAnnotation() {
+      runTest("compiler-plugin/testData/box/special/annotation.kt");
+    }
+
+    @Test
+    @TestMetadata("companion.kt")
+    public void testCompanion() {
+      runTest("compiler-plugin/testData/box/special/companion.kt");
+    }
+
+    @Test
+    @TestMetadata("dataClass.kt")
+    public void testDataClass() {
+      runTest("compiler-plugin/testData/box/special/dataClass.kt");
+    }
+
+    @Test
+    @TestMetadata("primaryConstructor.kt")
+    public void testPrimaryConstructor() {
+      runTest("compiler-plugin/testData/box/special/primaryConstructor.kt");
+    }
+
+    @Test
+    @TestMetadata("var.kt")
+    public void testVar() {
+      runTest("compiler-plugin/testData/box/special/var.kt");
+    }
+  }
+
+  @Nested
+  @TestMetadata("compiler-plugin/testData/box/toplevel")
+  @TestDataPath("$PROJECT_ROOT")
+  public class Toplevel {
+    @Test
+    public void testAllFilesPresentInToplevel() {
+      KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler-plugin/testData/box/toplevel"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
+    }
+
+    @Test
+    @TestMetadata("class.kt")
+    public void testClass() {
+      runTest("compiler-plugin/testData/box/toplevel/class.kt");
+    }
+
+    @Test
+    @TestMetadata("getter.kt")
+    public void testGetter() {
+      runTest("compiler-plugin/testData/box/toplevel/getter.kt");
+    }
+
+    @Test
+    @TestMetadata("interface.kt")
+    public void testInterface() {
+      runTest("compiler-plugin/testData/box/toplevel/interface.kt");
+    }
+
+    @Test
+    @TestMetadata("setter.kt")
+    public void testSetter() {
+      runTest("compiler-plugin/testData/box/toplevel/setter.kt");
+    }
+
+    @Test
+    @TestMetadata("val.kt")
+    public void testVal() {
+      runTest("compiler-plugin/testData/box/toplevel/val.kt");
+    }
+
+    @Test
+    @TestMetadata("var.kt")
+    public void testVar() {
+      runTest("compiler-plugin/testData/box/toplevel/var.kt");
+    }
   }
 }

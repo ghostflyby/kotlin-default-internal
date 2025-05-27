@@ -1,0 +1,11 @@
+FILE fqName:<root> fileName:/getter.kt
+  FUN name:box visibility:internal modality:FINAL <> () returnType:kotlin.String
+    BLOCK_BODY
+      RETURN type=kotlin.Nothing from='internal final fun box (): kotlin.String declared in <root>'
+        CONST String type=kotlin.String value="OK"
+  PROPERTY name:a visibility:internal modality:FINAL [val]
+    FUN name:<get-a> visibility:internal modality:FINAL <> () returnType:kotlin.Int
+      correspondingProperty: PROPERTY name:a visibility:internal modality:FINAL [val]
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='internal final fun <get-a> (): kotlin.Int declared in <root>'
+          CONST Int type=kotlin.Int value=1
