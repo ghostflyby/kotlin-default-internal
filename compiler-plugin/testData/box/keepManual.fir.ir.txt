@@ -10,7 +10,7 @@ FILE fqName:foo.bar fileName:/keepManual.kt
           GET_FIELD 'FIELD PROPERTY_BACKING_FIELD name:a type:kotlin.Int visibility:private [final,static]' type=kotlin.Int origin=null
   CLASS CLASS name:C modality:FINAL visibility:public superTypes:[kotlin.Any]
     $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:foo.bar.C
-    CONSTRUCTOR visibility:internal <> () returnType:foo.bar.C [primary]
+    CONSTRUCTOR visibility:public <> () returnType:foo.bar.C [primary]
       BLOCK_BODY
         DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () declared in kotlin.Any'
         INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:C modality:FINAL visibility:public superTypes:[kotlin.Any]' type=kotlin.Unit

@@ -11,7 +11,7 @@ FILE: keepManual.kt
             ^ Int(2)
         }
     public final class C : R|kotlin/Any| {
-        internal constructor(): R|foo/bar/C| {
+        public constructor(): R|foo/bar/C| {
             super<R|kotlin/Any|>()
         }
 

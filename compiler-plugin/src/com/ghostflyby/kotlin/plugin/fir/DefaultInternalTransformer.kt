@@ -40,4 +40,16 @@ class DefaultInternalTransformer(session: FirSession) : FirStatusTransformerExte
       status
   }
 
+  override fun transformStatus(
+    status: FirDeclarationStatus,
+    constructor: FirConstructor,
+    containingClass: FirClassLikeSymbol<*>?,
+    isLocal: Boolean
+  ): FirDeclarationStatus {
+    return if (constructor.isPrimary && containingClass != null)
+      status.copyWithNewDefaults(containingClass.visibility)
+    else
+      transformStatus(status, constructor)
+  }
+
 }
