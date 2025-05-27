@@ -1,7 +1,6 @@
 package dev.ghostflyby.kotlin.plugin
 
 import dev.ghostflyby.BuildConfig
-import org.gradle.api.Project
 import org.gradle.api.provider.Provider
 import org.jetbrains.kotlin.gradle.plugin.KotlinCompilation
 import org.jetbrains.kotlin.gradle.plugin.KotlinCompilerPluginSupportPlugin
@@ -10,9 +9,6 @@ import org.jetbrains.kotlin.gradle.plugin.SubpluginOption
 
 @Suppress("unused") // Used via reflection.
 class DefaultInternalGradlePlugin : KotlinCompilerPluginSupportPlugin {
-    override fun apply(target: Project) {
-        target.extensions.create("kotlinDefaultInternalPlugin", DefaultInternalGradleExtension::class.java)
-    }
 
     override fun isApplicable(kotlinCompilation: KotlinCompilation<*>): Boolean = true
 
