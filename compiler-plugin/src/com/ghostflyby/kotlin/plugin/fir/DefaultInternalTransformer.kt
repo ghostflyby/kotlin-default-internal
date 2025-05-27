@@ -10,13 +10,6 @@ import org.jetbrains.kotlin.fir.extensions.FirStatusTransformerExtension
 import org.jetbrains.kotlin.fir.symbols.impl.FirClassLikeSymbol
 import org.jetbrains.kotlin.lexer.KtTokens
 
-/*
- * Generates top level class
- *
- * public final class foo.bar.MyClass {
- *     fun foo(): String = "Hello world"
- * }
- */
 class DefaultInternalTransformer(session: FirSession) : FirStatusTransformerExtension(session) {
   override fun needTransformStatus(declaration: FirDeclaration): Boolean {
     return declaration is FirMemberDeclaration &&
