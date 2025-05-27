@@ -6,6 +6,7 @@ import org.jetbrains.kotlin.fir.analysis.checkers.getContainingClassSymbol
 import org.jetbrains.kotlin.fir.analysis.checkers.hasModifier
 import org.jetbrains.kotlin.fir.copyWithNewDefaults
 import org.jetbrains.kotlin.fir.declarations.*
+import org.jetbrains.kotlin.fir.declarations.utils.isCompanion
 import org.jetbrains.kotlin.fir.declarations.utils.isInterface
 import org.jetbrains.kotlin.fir.declarations.utils.visibility
 import org.jetbrains.kotlin.fir.extensions.FirStatusTransformerExtension
@@ -21,6 +22,10 @@ class DefaultInternalTransformer(session: FirSession) : FirStatusTransformerExte
 
     val containingClass = declaration.getContainingClassSymbol()?.fir
     if (containingClass is FirRegularClass && containingClass.isInterface) {
+      return false
+    }
+
+    if (declaration is FirRegularClass && declaration.isCompanion) {
       return false
     }
 
