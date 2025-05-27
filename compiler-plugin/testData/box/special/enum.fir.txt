@@ -1,0 +1,21 @@
+FILE: enum.kt
+    private final enum class E : R|kotlin/Enum<E>| {
+        private constructor(): R|E| {
+            super<R|kotlin/Enum<E>|>()
+        }
+
+        public final static enum entry A: R|E|
+        public final static enum entry B: R|E|
+        internal final static fun values(): R|kotlin/Array<E>| {
+        }
+
+        internal final static fun valueOf(value: R|kotlin/String|): R|E| {
+        }
+
+        internal final static val entries: R|kotlin/enums/EnumEntries<E>|
+            internal get(): R|kotlin/enums/EnumEntries<E>|
+
+    }
+    internal final fun box(): R|kotlin/String| {
+        ^box String(OK)
+    }
