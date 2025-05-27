@@ -1,0 +1,6 @@
+.idea/*
+!.idea/kotlinTestDataPluginTestDataPaths.xml
+.gradle/
+.kotlin/
+build/
+out/
