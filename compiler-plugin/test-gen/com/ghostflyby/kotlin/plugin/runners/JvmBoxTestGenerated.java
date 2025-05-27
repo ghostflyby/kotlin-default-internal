@@ -72,6 +72,12 @@ public class JvmBoxTestGenerated extends AbstractJvmBoxTest {
     }
 
     @Test
+    @TestMetadata("enum.kt")
+    public void testEnum() {
+      runTest("compiler-plugin/testData/box/special/enum.kt");
+    }
+
+    @Test
     @TestMetadata("primaryConstructor.kt")
     public void testPrimaryConstructor() {
       runTest("compiler-plugin/testData/box/special/primaryConstructor.kt");

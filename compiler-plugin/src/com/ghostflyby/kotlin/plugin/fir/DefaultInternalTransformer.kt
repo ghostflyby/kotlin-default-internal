@@ -27,6 +27,9 @@ class DefaultInternalTransformer(session: FirSession) : FirStatusTransformerExte
       return false
     }
 
+    if (declaration is FirEnumEntry)
+      return false
+
     if (declaration is FirRegularClass && declaration.isCompanion) {
       return false
     }
@@ -75,6 +78,7 @@ class DefaultInternalTransformer(session: FirSession) : FirStatusTransformerExte
         if (fir.classKind == ClassKind.ANNOTATION_CLASS)
           return status
       }
+
       else -> {}
     }
     return if (property.source?.kind == KtFakeSourceElementKind.PropertyFromParameter && containingClass?.visibility == Visibilities.Public) {
