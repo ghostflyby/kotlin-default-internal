@@ -8,3 +8,4 @@ Make `internal` the default visibility modifier for classes, functions, and prop
 - properties in primary constructors follow the visibility of the class, but at least `internal`
 - members of interfaces default to `public`
 - property accessors default to the visibility of the property
+- enum entries default to `public`
