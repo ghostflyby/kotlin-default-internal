@@ -27,8 +27,6 @@ dependencies {
     testFixturesApi(kotlin("compiler-internal-test-framework"))
     testFixturesApi(kotlin("compiler"))
 
-    annotationsRuntimeClasspath(project(":plugin-annotations"))
-
     // Dependencies required to run the internal test framework.
     testRuntimeOnly("junit:junit:4.13.2")
     testRuntimeOnly(kotlin("reflect"))
@@ -81,7 +79,7 @@ val generateTests by tasks.registering(JavaExec::class) {
         .withPropertyName("generatedTests")
 
     classpath = sourceSets.testFixtures.get().runtimeClasspath
-    mainClass.set("org.demiurg906.kotlin.plugin.GenerateTestsKt")
+    mainClass.set("com.ghostflyby.kotlin.plugin.GenerateTestsKt")
     workingDir = rootDir
 }
 

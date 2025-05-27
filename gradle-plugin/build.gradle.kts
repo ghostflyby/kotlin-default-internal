@@ -31,21 +31,15 @@ buildConfig {
     buildConfigField("String", "KOTLIN_PLUGIN_NAME", "\"${pluginProject.name}\"")
     buildConfigField("String", "KOTLIN_PLUGIN_VERSION", "\"${pluginProject.version}\"")
 
-    val annotationsProject = project(":plugin-annotations")
-    buildConfigField(
-        type = "String",
-        name = "ANNOTATIONS_LIBRARY_COORDINATES",
-        expression = "\"${annotationsProject.group}:${annotationsProject.name}:${annotationsProject.version}\""
-    )
 }
 
 gradlePlugin {
     plugins {
-        create("SimplePlugin") {
+        create("KotlinDefaultInternalPlugin") {
             id = rootProject.group.toString()
-            displayName = "SimplePlugin"
-            description = "SimplePlugin"
-            implementationClass = "org.demiurg906.kotlin.plugin.SimpleGradlePlugin"
+            displayName = "KotlinDefaultInternalPlugin"
+            description = "make `internal` the default visibility of Kotlin"
+            implementationClass = "com.ghostflyby.kotlin.plugin.DefaultInternalGradlePlugin"
         }
     }
 }

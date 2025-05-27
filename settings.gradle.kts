@@ -14,8 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "kotlin-compiler-plugin-template"
+rootProject.name = "kotlin-default-internal"
 
 include("compiler-plugin")
 include("gradle-plugin")
-include("plugin-annotations")

@@ -1,3 +1,0 @@
-public abstract interface annotation class org/demiurg906/kotlin/plugin/SomeAnnotation : java/lang/annotation/Annotation {
-}
-

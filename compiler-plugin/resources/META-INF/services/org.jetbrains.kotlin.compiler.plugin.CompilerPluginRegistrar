@@ -1,1 +1,1 @@
-org.demiurg906.kotlin.plugin.SimplePluginComponentRegistrar
+com.ghostflyby.kotlin.plugin.DefaultInternalPluginComponentRegistrar
