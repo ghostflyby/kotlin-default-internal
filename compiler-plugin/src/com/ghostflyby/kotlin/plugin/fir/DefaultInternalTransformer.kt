@@ -11,11 +11,13 @@ import org.jetbrains.kotlin.fir.symbols.impl.FirClassLikeSymbol
 import org.jetbrains.kotlin.lexer.KtTokens
 
 class DefaultInternalTransformer(session: FirSession) : FirStatusTransformerExtension(session) {
-  override fun needTransformStatus(declaration: FirDeclaration): Boolean {
-    return declaration is FirMemberDeclaration &&
-        !declaration.symbol.hasModifier(KtTokens.PUBLIC_KEYWORD)
-        && (declaration.status.visibility == Visibilities.Unknown || declaration.status.visibility == Visibilities.Public)
-  }
+  override fun needTransformStatus(declaration: FirDeclaration): Boolean =
+    declaration is FirMemberDeclaration &&
+        declaration.run {
+          origin == FirDeclarationOrigin.Source &&
+              !symbol.hasModifier(KtTokens.PUBLIC_KEYWORD)
+              && (visibility == Visibilities.Unknown || visibility == Visibilities.Public)
+        }
 
   override fun transformStatus(status: FirDeclarationStatus, declaration: FirDeclaration): FirDeclarationStatus {
     return status.copyWithNewDefaults(
