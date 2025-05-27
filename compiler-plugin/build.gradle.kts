@@ -41,7 +41,7 @@ buildConfig {
     }
 
     packageName(group.toString())
-    buildConfigField("String", "KOTLIN_PLUGIN_ID", "\"${rootProject.group}\"")
+    buildConfigField("String", "KOTLIN_PLUGIN_ID", "\"${rootProject.group}.kotlin.defaultInternal\"")
 }
 
 tasks.test {

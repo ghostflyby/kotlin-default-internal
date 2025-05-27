@@ -30,8 +30,6 @@ class DefaultInternalGradlePlugin : KotlinCompilerPluginSupportPlugin {
         val project = kotlinCompilation.target.project
 
         return project.provider {
-            val extension = project.extensions.getByType(DefaultInternalGradleExtension::class.java)
-
             emptyList()
         }
     }

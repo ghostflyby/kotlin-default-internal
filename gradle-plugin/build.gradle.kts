@@ -24,11 +24,11 @@ dependencies {
 buildConfig {
     packageName(project.group.toString())
 
-    buildConfigField("String", "KOTLIN_PLUGIN_ID", "\"${rootProject.group}\"")
+    buildConfigField("String", "KOTLIN_PLUGIN_ID", "\"${rootProject.group}.kotlin.defaultInternal\"")
 
     val pluginProject = project(":compiler-plugin")
     buildConfigField("String", "KOTLIN_PLUGIN_GROUP", "\"${pluginProject.group}\"")
-    buildConfigField("String", "KOTLIN_PLUGIN_NAME", "\"${pluginProject.name}\"")
+    buildConfigField("String", "KOTLIN_PLUGIN_NAME", "\"kotlin-default-internal-compiler-plugin\"")
     buildConfigField("String", "KOTLIN_PLUGIN_VERSION", "\"${pluginProject.version}\"")
 
 }
