@@ -1,7 +1,7 @@
-package com.ghostflyby.kotlin.plugin
+package dev.ghostflyby.kotlin.plugin
 
-import com.ghostflyby.kotlin.plugin.fir.DefaultInternalTransformer
-import io.github.ghostflyby.BuildConfig
+import dev.ghostflyby.BuildConfig
+import dev.ghostflyby.kotlin.plugin.fir.DefaultInternalTransformer
 import org.jetbrains.kotlin.compiler.plugin.AbstractCliOption
 import org.jetbrains.kotlin.compiler.plugin.CliOption
 import org.jetbrains.kotlin.compiler.plugin.CommandLineProcessor

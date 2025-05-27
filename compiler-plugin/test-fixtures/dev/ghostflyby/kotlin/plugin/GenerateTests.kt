@@ -1,6 +1,6 @@
-package com.ghostflyby.kotlin.plugin
+package dev.ghostflyby.kotlin.plugin
 
-import com.ghostflyby.kotlin.plugin.runners.AbstractJvmBoxTest
+import dev.ghostflyby.kotlin.plugin.runners.AbstractJvmBoxTest
 import org.jetbrains.kotlin.generators.generateTestGroupSuiteWithJUnit5
 
 fun main() {

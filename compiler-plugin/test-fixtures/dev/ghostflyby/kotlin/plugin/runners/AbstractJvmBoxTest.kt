@@ -1,6 +1,6 @@
-package com.ghostflyby.kotlin.plugin.runners
+package dev.ghostflyby.kotlin.plugin.runners
 
-import com.ghostflyby.kotlin.plugin.services.ExtensionRegistrarConfigurator
+import dev.ghostflyby.kotlin.plugin.services.ExtensionRegistrarConfigurator
 import org.jetbrains.kotlin.test.FirParser
 import org.jetbrains.kotlin.test.builders.TestConfigurationBuilder
 import org.jetbrains.kotlin.test.directives.CodegenTestDirectives

@@ -1,6 +1,6 @@
-package com.ghostflyby.kotlin.plugin.services
+package dev.ghostflyby.kotlin.plugin.services
 
-import com.ghostflyby.kotlin.plugin.DefaultInternalPluginRegistrar
+import dev.ghostflyby.kotlin.plugin.DefaultInternalPluginRegistrar
 import org.jetbrains.kotlin.compiler.plugin.CompilerPluginRegistrar
 import org.jetbrains.kotlin.config.CompilerConfiguration
 import org.jetbrains.kotlin.fir.extensions.FirExtensionRegistrarAdapter

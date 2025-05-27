@@ -1,4 +1,4 @@
-package com.ghostflyby.kotlin.plugin.fir
+package dev.ghostflyby.kotlin.plugin.fir
 
 import org.jetbrains.kotlin.KtFakeSourceElementKind
 import org.jetbrains.kotlin.descriptors.ClassKind

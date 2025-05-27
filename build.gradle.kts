@@ -6,6 +6,6 @@ plugins {
 }
 
 allprojects {
-    group = "io.github.ghostflyby"
+    group = "dev.ghostflyby"
     version = "0.1.0-SNAPSHOT"
 }

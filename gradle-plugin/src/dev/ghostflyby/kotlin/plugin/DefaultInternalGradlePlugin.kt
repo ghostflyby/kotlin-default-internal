@@ -1,6 +1,6 @@
-package com.ghostflyby.kotlin.plugin
+package dev.ghostflyby.kotlin.plugin
 
-import io.github.ghostflyby.BuildConfig
+import dev.ghostflyby.BuildConfig
 import org.gradle.api.Project
 import org.gradle.api.provider.Provider
 import org.jetbrains.kotlin.gradle.plugin.KotlinCompilation

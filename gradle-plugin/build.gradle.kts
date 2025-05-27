@@ -39,7 +39,7 @@ gradlePlugin {
             id = rootProject.group.toString()
             displayName = "KotlinDefaultInternalPlugin"
             description = "make `internal` the default visibility of Kotlin"
-            implementationClass = "com.ghostflyby.kotlin.plugin.DefaultInternalGradlePlugin"
+            implementationClass = "dev.ghostflyby.kotlin.plugin.DefaultInternalGradlePlugin"
         }
     }
 }
