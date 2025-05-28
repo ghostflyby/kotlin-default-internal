@@ -1,5 +1,3 @@
-import org.gradle.internal.impldep.junit.runner.Version.id
-
 pluginManagement {
     repositories {
         mavenCentral()
@@ -17,6 +15,7 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
+    @Suppress("UnstableApiUsage")
     repositories {
         mavenCentral()
         maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/bootstrap")
