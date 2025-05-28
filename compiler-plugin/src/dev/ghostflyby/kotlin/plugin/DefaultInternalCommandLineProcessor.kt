@@ -16,12 +16,16 @@ class DefaultInternalCommandLineProcessor : CommandLineProcessor {
 
     override val pluginOptions: Collection<CliOption> = emptyList()
 
-    override fun processOption(option: AbstractCliOption, value: String, configuration: CompilerConfiguration) {
+    override fun processOption(
+        option: AbstractCliOption,
+        value: String,
+        configuration: CompilerConfiguration,
+    ) {
         error("Unexpected config option: '${option.optionName}'")
     }
 }
 
-class DefaultInternalPluginComponentRegistrar: CompilerPluginRegistrar() {
+class DefaultInternalPluginComponentRegistrar : CompilerPluginRegistrar() {
     override val supportsK2: Boolean
         get() = true
 
