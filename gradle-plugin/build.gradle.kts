@@ -1,12 +1,9 @@
-import com.vanniktech.maven.publish.GradlePublishPlugin
-import com.vanniktech.maven.publish.SonatypeHost
-
 plugins {
     kotlin("jvm")
     id("com.github.gmazzo.buildconfig")
     id("java-gradle-plugin")
-    id("com.vanniktech.maven.publish")
     id("com.gradle.plugin-publish")
+    signing
 }
 
 group = "${rootProject.group}.gradle"
@@ -55,10 +52,4 @@ gradlePlugin {
             implementationClass = "dev.ghostflyby.kotlin.plugin.DefaultInternalGradlePlugin"
         }
     }
-}
-
-mavenPublishing {
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
-    configure(GradlePublishPlugin())
-    signAllPublications()
 }

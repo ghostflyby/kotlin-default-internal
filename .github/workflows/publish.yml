@@ -18,7 +18,7 @@ jobs:
               java-version: 21
 
           - uses: gradle/actions/setup-gradle@v4
-          - run: ./gradlew publish --no-configuration-cache --continue --info
+          - run: ./gradlew publishToMavenCentral publishPlugins --no-configuration-cache --continue --info
             env:
               ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_CENTRAL_USER }}
               ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}

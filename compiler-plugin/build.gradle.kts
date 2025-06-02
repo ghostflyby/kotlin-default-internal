@@ -113,4 +113,25 @@ fun Test.setLibraryProperty(
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
+    pom {
+        name.set("Kotlin Default Internal Compiler Plugin")
+        description.set("Kotlin compiler plugin to make `internal` the default visibility")
+        url.set("https://github.com/ghostflyby/kotlin-default-internal")
+        licenses {
+            license {
+                name.set("GNU Lesser General Public License v3.0")
+                url.set("https://www.gnu.org/licenses/lgpl-3.0.txt")
+            }
+        }
+        developers {
+            developer {
+                id.set("ghostflyby")
+                email.set("ghostflyby+maven@outlook.com")
+            }
+        }
+        scm {
+            url.set("https://github.com/ghostflyby/kotlin-default-internal.git")
+            tag.set("v$version")
+        }
+    }
 }
