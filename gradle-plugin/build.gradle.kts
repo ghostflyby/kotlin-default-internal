@@ -53,3 +53,9 @@ gradlePlugin {
         }
     }
 }
+
+signing {
+    val signingInMemoryKey: String? by project
+    val signingInMemoryKeyPassword: String? by project
+    useInMemoryPgpKeys(signingInMemoryKey, signingInMemoryKeyPassword)
+}
