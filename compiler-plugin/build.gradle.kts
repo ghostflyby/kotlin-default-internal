@@ -111,7 +111,7 @@ fun Test.setLibraryProperty(
 }
 
 mavenPublishing {
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = true)
     signAllPublications()
     pom {
         name.set("Kotlin Default Internal Compiler Plugin")
